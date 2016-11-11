@@ -1,0 +1,30 @@
+2665
+Saradomin full helm
+2661
+Saradomin platebody
+2663
+Saradomin platelegs
+2667
+Saradomin kiteshield
+2657
+Zamorak full helm
+2653
+Zamorak platebody
+2655
+Zamorak platelegs
+2659
+Zamorak kiteshield
+1725
+Amulet of strength
+1731
+Amulet of power
+1897
+Chocolate cake
+1905
+Asgarnian ale
+1271
+Adamant pickaxe
+1275
+Rune pickaxe
+561
+Nature rune
