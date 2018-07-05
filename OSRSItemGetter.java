@@ -20,6 +20,7 @@ public class OSRSItemGetter {
 		BufferedReader brtxt = null;
 		int itemID;
 		String[] splitLine = null;
+		String line;
 		
 //		System.out.println("Enter item num:");
 //		Scanner scanner = new Scanner(System.in);
@@ -31,24 +32,24 @@ public class OSRSItemGetter {
 			String nextLine;
 			while ((nextLine = brtxt.readLine()) != null) {
 				itemID = Integer.parseInt(nextLine);
-				// read in even numbers, since id then item name
+				// read in even numbers, since ordering is id then item name
 				nextLine = brtxt.readLine();
 				System.out.println(nextLine);
+				// Get inputstream thru URL Connection
 				url = new URL("https://api.rsbuddy.com/grandExchange?a=guidePrice&i="
 						+ itemID);
-				// Get inputstream thru URL Connection
 				con = url.openConnection();
 				is = con.getInputStream();
 				isr = new InputStreamReader(is);
 				br = new BufferedReader(isr);
 
-				String line = br.readLine();
+				line = br.readLine();
 				if (line != null)
 					splitLine = line.split(",");
 				
 				for (int i = 0; i < splitLine.length; i++) {
 					System.out.println(splitLine[i]);
-					// Get rid of everything except the numbers
+					// If we want to get rid of everything except the numbers
 					//System.out.println(splitLine[i].replaceAll("\\D",  ""));
 				}
 				System.out.println();
